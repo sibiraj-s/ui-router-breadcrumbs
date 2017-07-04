@@ -1,6 +1,6 @@
 {
   "name": "ui-router-breadcrumbs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dynamic breadcrumb generator for AngularJs ui-router",
   "main": "index.js",
   "scripts": {
