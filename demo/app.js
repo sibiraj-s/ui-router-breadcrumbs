@@ -1,12 +1,7 @@
 var app = angular.module('myApp', ['ui.router', 'ngSanitize', 'uiBreadcrumbs']);
 
-app.config(['$stateProvider', '$locationProvider', '$urlRouterProvider',
-  function($stateProvider, $locationProvider, $urlRouterProvider) {
-
-    $locationProvider.html5Mode({
-      enabled: true,
-      requireBase: true
-    });
+app.config(['$stateProvider', '$urlRouterProvider',
+  function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
