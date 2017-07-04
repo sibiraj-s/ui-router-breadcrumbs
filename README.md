@@ -1,6 +1,6 @@
 # ui-router-breadcrumbs [![Build Status](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs.svg?branch=master)](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs)
 
-ui-router-breadcrumbs is a simple service for creating toast notification for AngularJS pages
+ui-router-breadcrumbs is a simple directive for creating breadcrumbs dynamically for AngularJS pages using angular-ui-router
 
 live demo [here][demo]
 
