@@ -1,0 +1,57 @@
+{
+  "name": "ui-router-breadcrumbs",
+  "version": "1.0.0",
+  "description": "Dynamic breadcrumb generator for AngularJs ui-router",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "yarn test",
+    "gh-pages": "git subtree push --prefix demo origin gh-pages",
+    "cz": "git-cz",
+    "test": "grunt coffeelint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sibiraj-S/ui-router-breadcrumbs.git"
+  },
+  "keywords": [
+    "angular-breadcrumbs",
+    "ui-router-breadcrumbs",
+    "breadcrumbs",
+    "ui-router",
+    "angularjs-breadcrumbs"
+  ],
+  "author": "Sibiraj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sibiraj-S/ui-router-breadcrumbs/issues"
+  },
+  "homepage": "https://github.com/Sibiraj-S/ui-router-breadcrumbs#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.6.5",
+    "angular-sanitize": "^1.6.5"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "connect-history-api-fallback": "^1.3.0",
+    "cz-conventional-changelog": "^2.0.0",
+    "delete-empty": "^1.0.1",
+    "grunt": "^1.0.1",
+    "grunt-coffeelint": "^0.0.16",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ng-annotate": "^3.0.0",
+    "husky": "^0.14.2",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
