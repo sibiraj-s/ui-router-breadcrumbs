@@ -3,8 +3,6 @@
 module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
 
-  history = require('connect-history-api-fallback')
-
   grunt.initConfig
     pkg: grunt.file.readJSON("package.json")
 
@@ -79,9 +77,6 @@ module.exports = (grunt) ->
           base: 'demo/'
           keepalive: true
           livereload: true
-          middleware: (connect, options, middleware) ->
-            middleware.unshift(history())
-            return middleware
 
   # Grunt task(s).
   grunt.registerTask "default", ["coffeelint", "coffee"]
