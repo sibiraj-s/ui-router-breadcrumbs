@@ -1,6 +1,6 @@
 {
   "name": "ui-router-breadcrumbs",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Simple directive for creating breadcrumbs dynamically for AngularJS pages using angular-ui-router",
   "scripts": {
     "precommit": "yarn test",
@@ -31,9 +31,6 @@
     "angular-sanitize": "^1.6.5"
   },
   "devDependencies": {
-    "@uirouter/angularjs": "^1.0.5",
-    "angular": "^1.6.5",
-    "angular-sanitize": "^1.6.5",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
     "delete-empty": "^1.0.1",

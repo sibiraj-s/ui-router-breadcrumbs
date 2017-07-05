@@ -1,7 +1,7 @@
 ###
 # @module ui-router-breadcrumbs
 # @description ui-router breadcrumbs for AngularJs pages
-# @version v1.0.3
+# @version v1.0.4
 # @link https://github.com/Sibiraj-S/ui-router-breadcrumbs
 # @licence MIT License, https://opensource.org/licenses/MIT
 ###
@@ -10,16 +10,29 @@
 
 app = angular.module 'uiBreadcrumbs', ['ui.router', 'ngSanitize']
 
-app.directive 'uiBreadcrumb', ($state, $transitions, $rootScope, $compile) ->
+app.directive 'uiBreadcrumb', ($state, $transitions) ->
   restrict: 'E',
   transclude: true
   link: (scope, element, attrs) ->
 
     attrs.abstract = if attrs.abstract then attrs.abstract else false
 
-    $transitions.onSuccess {}, (trans) ->
+    abstract = JSON.parse(attrs.abstract)
+
+    $transitions.onSuccess {}, ->
+      updateBreadCrumbs()
+
+    angular.element(document).ready ->
+      updateBreadCrumbs()
+
+    ###
+    # watch for trasition success events
+    # on state change success load breadcrumbs
+    ###
+    updateBreadCrumbs = ->
       scope.$breadcrumbs = []
       stateArray = []
+      parentStates = []
 
       ###
       # gets all states
@@ -33,16 +46,18 @@ app.directive 'uiBreadcrumb', ($state, $transitions, $rootScope, $compile) ->
       for i of stateArray
         if stateArray[i] isnt ''
           if $state.get(stateArray[i]).$$state().parent.self.name isnt ''
-            scope.$breadcrumbs.push($state.get(stateArray[i]).$$state().parent.self)
+            parentStates.push($state.get(stateArray[i]).$$state().parent.self)
 
       ###
       # if abstract is false
       # removes abstract states from breadcrumbs
       ###
-      if not attrs.abstract
-        for i of scope.$breadcrumbs
-          if scope.$breadcrumbs[i].abstract
-            scope.$breadcrumbs.splice(i, 1)
+      if not abstract
+        for i of parentStates
+          if not parentStates[i].abstract
+            scope.$breadcrumbs.push parentStates[i]
+      else
+        scope.$breadcrumbs = parentStates
 
       ###
       # add current state to breadcrumbs
@@ -53,5 +68,5 @@ app.directive 'uiBreadcrumb', ($state, $transitions, $rootScope, $compile) ->
     return
 
   template: '<ol class="breadcrumb">'+
-    '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label}}</a></li>'+
+    '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label || data.name}}</a></li>'+
     '</ol>'
