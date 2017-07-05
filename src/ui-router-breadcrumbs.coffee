@@ -1,35 +1,31 @@
 ###
 # @module ui-router-breadcrumbs
 # @description ui-router breadcrumbs for AngularJs pages
-# @version v1.0.4
+# @version v1.0.5
 # @link https://github.com/Sibiraj-S/ui-router-breadcrumbs
 # @licence MIT License, https://opensource.org/licenses/MIT
 ###
 
 'use strict'
-
+loaded = false
 app = angular.module 'uiBreadcrumbs', ['ui.router', 'ngSanitize']
 
-app.directive 'uiBreadcrumb', ($state, $transitions) ->
+app.directive 'uiBreadcrumb', ($state, $rootScope) ->
   restrict: 'E',
   transclude: true
   link: (scope, element, attrs) ->
 
     attrs.abstract = if attrs.abstract then attrs.abstract else false
 
+    # parse string to boolean
     abstract = JSON.parse(attrs.abstract)
-
-    $transitions.onSuccess {}, ->
-      updateBreadCrumbs()
-
-    angular.element(document).ready ->
-      updateBreadCrumbs()
 
     ###
     # watch for trasition success events
     # on state change success load breadcrumbs
     ###
-    updateBreadCrumbs = ->
+    $rootScope.$on 'updateBreadCrumbs', (event, trans) ->
+      loaded = true
       scope.$breadcrumbs = []
       stateArray = []
       parentStates = []
@@ -70,3 +66,18 @@ app.directive 'uiBreadcrumb', ($state, $transitions) ->
   template: '<ol class="breadcrumb">'+
     '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label || data.name}}</a></li>'+
     '</ol>'
+
+app.run ($rootScope, $transitions, $timeout) ->
+  $transitions.onSuccess {}, (trans) ->
+    if loaded
+      $timeout ->
+        $rootScope.$emit 'updateBreadCrumbs', trans
+        return
+      , 0
+      return
+    else
+      $timeout ->
+        $rootScope.$emit 'updateBreadCrumbs', trans
+        return
+      , 1000
+      return

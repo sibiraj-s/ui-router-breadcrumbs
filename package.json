@@ -1,6 +1,6 @@
 {
   "name": "ui-router-breadcrumbs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Simple directive for creating breadcrumbs dynamically for AngularJS pages using angular-ui-router",
   "scripts": {
     "precommit": "yarn test",
