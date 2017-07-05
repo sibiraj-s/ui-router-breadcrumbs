@@ -1,7 +1,7 @@
 ###
 # @module ui-router-breadcrumbs
 # @description ui-router breadcrumbs for AngularJs pages
-# @version v1.0.0
+# @version v1.0.3
 # @link https://github.com/Sibiraj-S/ui-router-breadcrumbs
 # @licence MIT License, https://opensource.org/licenses/MIT
 ###
@@ -15,8 +15,9 @@ app.directive 'uiBreadcrumb', ($state, $transitions, $rootScope, $compile) ->
   transclude: true
   link: (scope, element, attrs) ->
 
-    $rootScope.$on 'updateBreadCrumbs', (event, trans) ->
+    attrs.abstract = if attrs.abstract then attrs.abstract else false
 
+    $transitions.onSuccess {}, (trans) ->
       scope.$breadcrumbs = []
       stateArray = []
 
@@ -54,13 +55,3 @@ app.directive 'uiBreadcrumb', ($state, $transitions, $rootScope, $compile) ->
   template: '<ol class="breadcrumb">'+
     '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label}}</a></li>'+
     '</ol>'
-
-app.run ($rootScope, $transitions, $timeout) ->
-
-  ###
-  # on state change success calls a function to update breadcrumbs
-  ###
-  $transitions.onSuccess {}, (trans) ->
-    $rootScope.$emit 'updateBreadCrumbs', trans
-    return
-  return

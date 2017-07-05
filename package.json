@@ -1,8 +1,7 @@
 {
   "name": "ui-router-breadcrumbs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Simple directive for creating breadcrumbs dynamically for AngularJS pages using angular-ui-router",
-  "main": "index.js",
   "scripts": {
     "precommit": "yarn test",
     "gh-pages": "git subtree push --prefix demo origin gh-pages",
@@ -26,12 +25,15 @@
     "url": "https://github.com/Sibiraj-S/ui-router-breadcrumbs/issues"
   },
   "homepage": "https://github.com/Sibiraj-S/ui-router-breadcrumbs#readme",
-  "dependencies": {
+  "peerDependencies": {
     "@uirouter/angularjs": "^1.0.5",
     "angular": "^1.6.5",
     "angular-sanitize": "^1.6.5"
   },
   "devDependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.6.5",
+    "angular-sanitize": "^1.6.5",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
     "delete-empty": "^1.0.1",
