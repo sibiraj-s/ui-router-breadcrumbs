@@ -64,6 +64,13 @@
       </code></pre>
       <h3>Options</h3>
       <p>you can specify to show or hide abstract states</p>
+      <p>can provide globally as</p>
+      <pre><code class="js">
+  app.config(['breadcrumbconfigProvider', function(breadcrumbconfigProvider) {
+        breadcrumbconfigProvider.setAbstract(false);
+  }]);
+    </code></pre>
+      <p>or can be provided as attribute in the directive which will override the default configuration</p>
       <pre><code class="html">
   &lt;ui-breadcrumb abstract=true&gt;&lt;/ui-breadcrumb&gt;
     </code></pre>

@@ -44,3 +44,8 @@ body .contain .col60 {
 body .contain .col60 .filler {
   height: 40px;
 }
+body .contain .col60 pre {
+  background-color: transparent;
+  border: 0;
+  padding-left: 0;
+}

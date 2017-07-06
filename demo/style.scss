@@ -54,6 +54,12 @@ body {
       .filler {
         height: 40px;
       }
+
+      pre {
+        background-color: transparent;
+        border          : 0;
+        padding-left    : 0;
+      }
     }
   }
 }
