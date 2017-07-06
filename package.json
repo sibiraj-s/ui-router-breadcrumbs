@@ -25,7 +25,7 @@
     "url": "https://github.com/Sibiraj-S/ui-router-breadcrumbs/issues"
   },
   "homepage": "https://github.com/Sibiraj-S/ui-router-breadcrumbs#readme",
-  "peerDependencies": {
+  "dependencies": {
     "@uirouter/angularjs": "^1.0.5",
     "angular": "^1.6.5",
     "angular-sanitize": "^1.6.5"

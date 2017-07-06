@@ -1,0 +1,28 @@
+{
+  "name": "ui-router-breadcrumbs",
+  "description": "A Simple directive for creating breadcrumbs dynamically for AngularJS pages using angular-ui-router",
+  "authors": [
+    "Sibiraj"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular-breadcrumbs",
+    "ui-router-breadcrumbs",
+    "breadcrumbs",
+    "ui-router",
+    "angularjs-breadcrumbs"
+  ],
+  "homepage": "https://github.com/Sibiraj-S/ui-router-breadcrumbs",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "^1.6.5",
+    "angular-sanitize": "^1.6.5"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
