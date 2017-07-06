@@ -17,8 +17,8 @@ app.directive 'uiBreadcrumb', ($state, $rootScope, $transitions, $timeout, bread
   restrict: 'E',
   transclude: true
   template: '<ol class="breadcrumb">'+
-    '<li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label || data.name}}</a></li>'+
-    '</ol>'
+  '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label || data.name}}</a></li>'+
+  '</ol>'
   link: (scope, element, attrs) ->
 
     attrs.abstract = if attrs.abstract then attrs.abstract else false

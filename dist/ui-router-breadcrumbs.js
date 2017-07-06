@@ -22,7 +22,7 @@
     return {
       restrict: 'E',
       transclude: true,
-      template: '<ol class="breadcrumb">' + '<li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label || data.name}}</a></li>' + '</ol>',
+      template: '<ol class="breadcrumb">' + '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label || data.name}}</a></li>' + '</ol>',
       link: function(scope, element, attrs) {
         var abstract, render;
         attrs.abstract = attrs.abstract ? attrs.abstract : false;
