@@ -1,7 +1,7 @@
 
 /*
  * @module ui-router-breadcrumbs
- * @description ui-router breadcrumbs for AngularJs pages
+ * @description A simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
  * @version v1.1.0
  * @link https://github.com/Sibiraj-S/ui-router-breadcrumbs
  * @licence MIT License, https://opensource.org/licenses/MIT
