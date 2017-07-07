@@ -2,7 +2,7 @@
 /*
  * @module ui-router-breadcrumbs
  * @description A simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
- * @version v1.1.2
+ * @version v1.1.3
  * @link https://github.com/Sibiraj-S/ui-router-breadcrumbs
  * @licence MIT License, https://opensource.org/licenses/MIT
  */
@@ -128,6 +128,10 @@
   /*
    * define angular module
    */
+
+  $uiBreadcrumb.$inject = ['$state', '$rootScope', 'breadcrumbsService'];
+
+  $breadcrumbsService.$inject = ['$state', 'breadcrumbconfig'];
 
   angular.module('uiBreadcrumbs', ['ui.router', 'ngSanitize']).directive('uiBreadcrumb', $uiBreadcrumb).provider('breadcrumbconfig', $breadcrumbconfig).factory('breadcrumbsService', $breadcrumbsService);
 
