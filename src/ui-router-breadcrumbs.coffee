@@ -1,19 +1,17 @@
 ###
 # @module ui-router-breadcrumbs
 # @description A simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
-# @version v1.1.1
+# @version v1.1.2
 # @link https://github.com/Sibiraj-S/ui-router-breadcrumbs
 # @licence MIT License, https://opensource.org/licenses/MIT
 ###
 
 'use strict'
 
-app = angular.module 'uiBreadcrumbs', ['ui.router', 'ngSanitize']
-
 ###
 # uiBreadcrumb directive
 ###
-app.directive 'uiBreadcrumb', ($state, $rootScope, $transitions, $timeout, breadcrumbsService) ->
+$uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
   restrict: 'E',
   transclude: true
   template: '<ol class="breadcrumb">'+
@@ -39,17 +37,12 @@ app.directive 'uiBreadcrumb', ($state, $rootScope, $transitions, $timeout, bread
       return
     return
 
-    # $transitions.onSuccess {}, (trans) ->
-    #   console.log("transition")
-    #   render()
-    #   return
-
 # END uiBreadcrumb DIRECTIVE
 
 ###
 # uiBreadcrumbsprovider
 ###
-app.provider 'breadcrumbconfig', ->
+$breadcrumbconfig = ->
 
   abstract = false
 
@@ -70,7 +63,7 @@ app.provider 'breadcrumbconfig', ->
 ###
 # breadcrumbsService
 ###
-app.factory 'breadcrumbsService', ($state, breadcrumbconfig) ->
+$breadcrumbsService = ($state, breadcrumbconfig) ->
 
   crateBreadcrumbs = (abstract) ->
     abstract = if abstract then abstract else breadcrumbconfig
@@ -113,3 +106,11 @@ app.factory 'breadcrumbsService', ($state, breadcrumbconfig) ->
     crateBreadcrumbs(abstract)
 
 # END breadcrumbsService
+
+###
+# define angular module
+###
+angular.module 'uiBreadcrumbs', ['ui.router', 'ngSanitize']
+  .directive('uiBreadcrumb', $uiBreadcrumb)
+  .provider('breadcrumbconfig', $breadcrumbconfig)
+  .factory('breadcrumbsService', $breadcrumbsService)

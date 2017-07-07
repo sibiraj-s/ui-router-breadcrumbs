@@ -2,23 +2,20 @@
 /*
  * @module ui-router-breadcrumbs
  * @description A simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
- * @version v1.1.1
+ * @version v1.1.2
  * @link https://github.com/Sibiraj-S/ui-router-breadcrumbs
  * @licence MIT License, https://opensource.org/licenses/MIT
  */
 
 (function() {
   'use strict';
-  var app;
-
-  app = angular.module('uiBreadcrumbs', ['ui.router', 'ngSanitize']);
-
 
   /*
    * uiBreadcrumb directive
    */
+  var $breadcrumbconfig, $breadcrumbsService, $uiBreadcrumb;
 
-  app.directive('uiBreadcrumb', ['$state', '$rootScope', '$transitions', '$timeout', 'breadcrumbsService', function($state, $rootScope, $transitions, $timeout, breadcrumbsService) {
+  $uiBreadcrumb = function($state, $rootScope, breadcrumbsService) {
     return {
       restrict: 'E',
       transclude: true,
@@ -42,14 +39,14 @@
         });
       }
     };
-  }]);
+  };
 
 
   /*
    * uiBreadcrumbsprovider
    */
 
-  app.provider('breadcrumbconfig', function() {
+  $breadcrumbconfig = function() {
     var abstract;
     abstract = false;
     return {
@@ -66,14 +63,14 @@
         return abstract;
       }
     };
-  });
+  };
 
 
   /*
    * breadcrumbsService
    */
 
-  app.factory('breadcrumbsService', ['$state', 'breadcrumbconfig', function($state, breadcrumbconfig) {
+  $breadcrumbsService = function($state, breadcrumbconfig) {
     var crateBreadcrumbs;
     crateBreadcrumbs = function(abstract) {
       var breadcrumbs, i, parentStates, stateArray;
@@ -125,6 +122,13 @@
         return crateBreadcrumbs(abstract);
       }
     };
-  }]);
+  };
+
+
+  /*
+   * define angular module
+   */
+
+  angular.module('uiBreadcrumbs', ['ui.router', 'ngSanitize']).directive('uiBreadcrumb', $uiBreadcrumb).provider('breadcrumbconfig', $breadcrumbconfig).factory('breadcrumbsService', $breadcrumbsService);
 
 }).call(this);
