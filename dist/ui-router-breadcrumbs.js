@@ -126,12 +126,17 @@
 
 
   /*
-   * define angular module
+   * dependency injection
    */
 
   $uiBreadcrumb.$inject = ['$state', '$rootScope', 'breadcrumbsService'];
 
   $breadcrumbsService.$inject = ['$state', 'breadcrumbconfig'];
+
+
+  /*
+   * define angular module
+   */
 
   angular.module('uiBreadcrumbs', ['ui.router', 'ngSanitize']).directive('uiBreadcrumb', $uiBreadcrumb).provider('breadcrumbconfig', $breadcrumbconfig).factory('breadcrumbsService', $breadcrumbsService);
 

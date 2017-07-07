@@ -11,7 +11,6 @@
 ###
 # uiBreadcrumb directive
 ###
-
 $uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
   restrict: 'E',
   transclude: true
@@ -109,11 +108,14 @@ $breadcrumbsService = ($state, breadcrumbconfig) ->
 # END breadcrumbsService
 
 ###
-# define angular module
+# dependency injection
 ###
 $uiBreadcrumb.$inject = ['$state', '$rootScope', 'breadcrumbsService']
 $breadcrumbsService.$inject = ['$state', 'breadcrumbconfig']
 
+###
+# define angular module
+###
 angular.module 'uiBreadcrumbs', ['ui.router', 'ngSanitize']
   .directive('uiBreadcrumb', $uiBreadcrumb)
   .provider('breadcrumbconfig', $breadcrumbconfig)
