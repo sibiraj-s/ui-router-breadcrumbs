@@ -1,5 +1,12 @@
 'use strict'
 
+banner = '/*!\n * @module <%= pkg.name %>\n' +
+  ' * @description <%= pkg.description %>\n' +
+  ' * @version v<%= pkg.version %>\n' +
+  ' * @link <%= pkg.homepage %>\n' +
+  ' * @licence MIT License, https://opensource.org/licenses/MIT\n' +
+  ' */\n\n';
+
 module.exports = (grunt) ->
   require('load-grunt-tasks')(grunt)
 
@@ -36,6 +43,15 @@ module.exports = (grunt) ->
         files:
           'dist/ui-router-breadcrumbs.min.css': 'dist/ui-router-breadcrumbs.css'
 
+    concat:
+      options:
+        stripBanners: true
+        banner: banner
+      dist:
+        files:
+          'dist/ui-router-breadcrumbs.js': ['dist/ui-router-breadcrumbs.js']
+          'dist/ui-router-breadcrumbs.css': ['dist/ui-router-breadcrumbs.css']
+
     watch:
       coffeescript:
         files: ['src/*.coffee']
@@ -59,6 +75,8 @@ module.exports = (grunt) ->
     uglify:
       options:
         sourceMap: true
+        output:
+          comments: '/^!/'
       target:
         files:
           'dist/ui-router-breadcrumbs.min.js': ['dist/ui-router-breadcrumbs.js']
@@ -74,7 +92,7 @@ module.exports = (grunt) ->
     connect:
       server:
         options:
-          base: 'demo/'
+          base: './'
           keepalive: true
           livereload: true
 
@@ -82,6 +100,6 @@ module.exports = (grunt) ->
   grunt.registerTask "default", ["coffeelint", "coffee"]
   grunt.registerTask "serve", ["connect"]
   grunt.registerTask "develop", ["default", "watch"]
-  grunt.registerTask "dist", ["default", "ngAnnotate", "uglify", "sass", "cssmin"]
+  grunt.registerTask "dist", ["default", "ngAnnotate", "sass", "concat", "uglify", "cssmin"]
 
   return
