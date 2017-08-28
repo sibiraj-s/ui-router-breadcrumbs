@@ -66,7 +66,9 @@ in routes config
 ```js
 .state('app.home', {
     url: '/home',
-    label: 'Home', // label to show in breadcrumbs
+    data: {
+      label: 'Home', //label to show in breadcrumbs
+    },
     templateUrl: 'templates/home.html'
 })
 ```

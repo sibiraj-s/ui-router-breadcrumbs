@@ -95,6 +95,8 @@ module.exports = (grunt) ->
           base: './'
           keepalive: true
           livereload: true
+          open: true,
+          hostname: 'localhost'
 
   # Grunt task(s).
   grunt.registerTask "default", ["coffeelint", "coffee"]
