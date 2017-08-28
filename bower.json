@@ -14,9 +14,9 @@
   ],
   "homepage": "https://github.com/Sibiraj-S/ui-router-breadcrumbs",
   "dependencies": {
-    "angular-ui-router": "^1.0.5",
-    "angular": "^1.6.5",
-    "angular-sanitize": "^1.6.5"
+    "angular-ui-router": ">=1.0.2",
+    "angular": ">=1.6.0",
+    "angular-sanitize": ">=1.6.0"
   },
   "ignore": [
     "**/.*",

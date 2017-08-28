@@ -7,7 +7,7 @@ $uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
   restrict: 'E',
   transclude: true
   template: '<ol class="breadcrumb">'+
-  '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.label || data.name}}</a></li>'+
+  '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.data.label || data.name}}</a></li>'+
   '</ol>'
   link: (scope, element, attrs) ->
 
