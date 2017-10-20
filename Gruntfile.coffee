@@ -31,7 +31,7 @@ module.exports = (grunt) ->
         style: 'expanded'
       demo:
         files:
-          'demo/style.css': 'demo/style.scss'
+          'docs/style.css': 'docs/style.scss'
       dist:
         files:
           'dist/ui-router-breadcrumbs.css': 'src/ui-router-breadcrumbs.scss'
@@ -63,12 +63,12 @@ module.exports = (grunt) ->
         files: ['dist/ui-router-breadcrumbs.css']
         tasks: ['cssmin']
       demoCss:
-        files: ['demo/**/*.scss']
+        files: ['docs/**/*.scss']
         tasks: ['sass']
       demoHtml:
-        files: ['demo/**/*.html']
+        files: ['docs/**/*.html']
       demoJs:
-        files: ['demo/**/*.js']
+        files: ['docs/**/*.js']
       options:
         livereload: true
 

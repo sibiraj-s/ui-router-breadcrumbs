@@ -4,9 +4,8 @@
   "description": "A Simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router",
   "scripts": {
     "precommit": "yarn test",
-    "gh-pages": "git subtree push --prefix demo origin gh-pages",
     "cz": "git-cz",
-    "test": "grunt coffeelint"
+    "test": "grunt coffeelint && grunt dist"
   },
   "repository": {
     "type": "git",
