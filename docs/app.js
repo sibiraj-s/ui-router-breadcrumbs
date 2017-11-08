@@ -48,7 +48,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
             templateUrl: 'templates/options.html'
           }
         }
-      })
+      });
 
   }
 ]);
