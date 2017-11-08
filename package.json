@@ -3,6 +3,10 @@
   "version": "1.1.4",
   "description": "A Simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router",
   "scripts": {
+    "start": "grunt serve",
+    "develop": "grunt develop",
+    "watch": "grunt watch",
+    "build": "grunt dist",
     "precommit": "yarn test && grunt dist",
     "cz": "git-cz",
     "test": "grunt coffeelint"
