@@ -7,7 +7,7 @@
     "develop": "grunt develop",
     "watch": "grunt watch",
     "build": "grunt dist",
-    "precommit": "grunt dist && yarn test && git add .",
+    "precommit": "yarn run build && yarn run test && git add .",
     "cz": "git-cz",
     "test": "grunt coffeelint"
   },
