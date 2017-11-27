@@ -8,7 +8,6 @@
 
 (function() {
   'use strict';
-
   /*
    * uiBreadcrumb directive
    */
@@ -28,7 +27,6 @@
             scope.$breadcrumbs = breadcrumbsService.getbreadcrumbs(abstract);
           }
         };
-
         /*
          * once the view content is updated
          * breadcrumbs are updated
@@ -40,21 +38,15 @@
     };
   };
 
-
+  // END uiBreadcrumb DIRECTIVE
   /*
    * uiBreadcrumbsprovider
    */
-
   $breadcrumbconfig = function() {
     var abstract;
     abstract = false;
     return {
       setAbstract: function(value) {
-
-        /*
-         * parse string to boolean
-         * if the input is not a boolean
-         */
         value = JSON.parse(value);
         abstract = value;
       },
@@ -64,11 +56,10 @@
     };
   };
 
-
+  // END breadcrumbconfig
   /*
    * breadcrumbsService
    */
-
   $breadcrumbsService = function($state, breadcrumbconfig) {
     var crateBreadcrumbs;
     crateBreadcrumbs = function(abstract) {
@@ -77,14 +68,12 @@
       breadcrumbs = [];
       stateArray = [];
       parentStates = [];
-
       /*
        * gets all states
        */
       for (i in $state.$current.includes) {
         stateArray.push(i);
       }
-
       /*
        * get parent state details
        */
@@ -95,7 +84,6 @@
           }
         }
       }
-
       /*
        * if abstract is false
        * removes abstract states from breadcrumbs
@@ -109,7 +97,6 @@
       } else {
         breadcrumbs = parentStates;
       }
-
       /*
        * add current state to breadcrumbs
        */
@@ -123,20 +110,17 @@
     };
   };
 
-
+  // END breadcrumbsService
   /*
    * dependency injection
    */
-
   $uiBreadcrumb.$inject = ['$state', '$rootScope', 'breadcrumbsService'];
 
   $breadcrumbsService.$inject = ['$state', 'breadcrumbconfig'];
 
-
   /*
    * define angular module
    */
-
   angular.module('uiBreadcrumbs', ['ui.router', 'ngSanitize']).directive('uiBreadcrumb', $uiBreadcrumb).provider('breadcrumbconfig', $breadcrumbconfig).factory('breadcrumbsService', $breadcrumbsService);
 
 }).call(this);
