@@ -1,32 +1,24 @@
 ```
 .
-├── demo
-│   ├── templates
-│   │   ├── home.html
-│   │   ├── options.html
-│   │   └── usage.html
-│   ├── app.js
-│   ├── index.html
-│   ├── style.css
-│   └── style.scss
-├── dist
-│   ├── ui-router-breadcrumbs.css
-│   ├── ui-router-breadcrumbs.js
-│   ├── ui-router-breadcrumbs.min.css
-│   ├── ui-router-breadcrumbs.min.css.map
-│   ├── ui-router-breadcrumbs.min.js
-│   └── ui-router-breadcrumbs.min.js.map
+├── scripts
+│   ├── postbuild.sh
+│   ├── prebuild.sh
+│   └── release.sh
 ├── src
 │   ├── ui-router-breadcrumbs.coffee
 │   ├── ui-router-breadcrumbs.html
 │   └── ui-router-breadcrumbs.scss
+├── .vscode
+│   └── settings.json
+├── coffeelint.json
 ├── .gitignore
-├── .pullapprove.yml
-├── .travis.yml
 ├── Gruntfile.coffee
 ├── LICENSE
-├── TREE.md
-├── coffeelint.json
 ├── package.json
+├── package-lock.json
+├── .pullapprove.yml
+├── README.md
+├── .travis.yml
+├── TREE.md
 └── yarn.lock
 ```
