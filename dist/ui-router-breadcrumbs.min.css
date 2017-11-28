@@ -1,8 +1,0 @@
-/*!
- * @module ui-router-breadcrumbs
- * @description A Simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
- * @version v1.1.4
- * @link https://github.com/Sibiraj-S/ui-router-breadcrumbs#readme
- * @licence MIT License, https://opensource.org/licenses/MIT
- */.disabled{cursor:not-allowed}.breadcrumb{padding:8px 15px;margin-bottom:20px;list-style:none;background-color:#f5f5f5;border-radius:4px}.breadcrumb>li{display:inline-block}.breadcrumb>li a{text-decoration:none}.breadcrumb>li a:focus{outline:0}.breadcrumb>li+li:before{padding:0 5px;color:#ccc;content:"/\00a0"}.breadcrumb>.active{color:#777}
-/*# sourceMappingURL=ui-router-breadcrumbs.min.css.map */
