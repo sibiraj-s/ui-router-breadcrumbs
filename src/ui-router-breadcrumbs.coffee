@@ -1,8 +1,6 @@
 'use strict'
 
-###
 # uiBreadcrumb directive
-###
 $uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
   restrict: 'E',
   transclude: true
@@ -20,10 +18,8 @@ $uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
         scope.$breadcrumbs = breadcrumbsService.getbreadcrumbs(abstract)
         return
 
-    ###
     # once the view content is updated
     # breadcrumbs are updated
-    ###
     scope.$on '$viewContentLoaded', ->
       render()
       return
@@ -31,18 +27,14 @@ $uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
 
 # END uiBreadcrumb DIRECTIVE
 
-###
 # uiBreadcrumbsprovider
-###
 $breadcrumbconfig = ->
 
   abstract = false
 
   setAbstract: (value) ->
-    ###
     # parse string to boolean
     # if the input is not a boolean
-    ###
     value = JSON.parse(value)
     abstract = value
     return
@@ -52,9 +44,7 @@ $breadcrumbconfig = ->
 
 # END breadcrumbconfig
 
-###
 # breadcrumbsService
-###
 $breadcrumbsService = ($state, breadcrumbconfig) ->
 
   crateBreadcrumbs = (abstract) ->
@@ -63,24 +53,18 @@ $breadcrumbsService = ($state, breadcrumbconfig) ->
     stateArray = []
     parentStates = []
 
-    ###
     # gets all states
-    ###
     for i of $state.$current.includes
       stateArray.push i
 
-    ###
     # get parent state details
-    ###
     for i of stateArray
       if stateArray[i] isnt ''
         if $state.get(stateArray[i]).$$state().parent.self.name isnt ''
           parentStates.push($state.get(stateArray[i]).$$state().parent.self)
 
-    ###
     # if abstract is false
     # removes abstract states from breadcrumbs
-    ###
     if not abstract
       for i of parentStates
         if not parentStates[i].abstract
@@ -88,9 +72,7 @@ $breadcrumbsService = ($state, breadcrumbconfig) ->
     else
       breadcrumbs = parentStates
 
-    ###
     # add current state to breadcrumbs
-    ###
     breadcrumbs.push $state.current
     return breadcrumbs
 
@@ -99,15 +81,11 @@ $breadcrumbsService = ($state, breadcrumbconfig) ->
 
 # END breadcrumbsService
 
-###
 # dependency injection
-###
 $uiBreadcrumb.$inject = ['$state', '$rootScope', 'breadcrumbsService']
 $breadcrumbsService.$inject = ['$state', 'breadcrumbconfig']
 
-###
 # define angular module
-###
 angular.module 'uiBreadcrumbs', ['ui.router', 'ngSanitize']
   .directive('uiBreadcrumb', $uiBreadcrumb)
   .provider('breadcrumbconfig', $breadcrumbconfig)
