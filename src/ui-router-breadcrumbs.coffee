@@ -4,9 +4,13 @@
 $uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
   restrict: 'E',
   transclude: true
-  template: '<ol class="breadcrumb">'+
-  '  <li ng-repeat="data in $breadcrumbs"><a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.data.label || data.name}}</a></li>'+
-  '</ol>'
+  template: '<nav aria-label="breadcrumb">'+
+  '  <ol class="breadcrumb">'+
+  '    <li class="breadcrumb-item" ng-repeat="data in $breadcrumbs" ui-sref-active="active">'+
+  '      <a ui-sref="{{data.abstract || data.name}}" ng-class="{\'disabled\': data.abstract}">{{data.data.label || data.name}}</a>'+
+  '    </li>'+
+  '  </ol>'+
+  '</nav>'
   link: (scope, element, attrs) ->
 
     attrs.abstract = if attrs.abstract then attrs.abstract else false

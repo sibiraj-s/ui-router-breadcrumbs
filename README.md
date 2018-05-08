@@ -1,5 +1,4 @@
-# ui-router-breadcrumbs [![Build Status](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs.svg?branch=master)](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs) [![Maintenance](https://img.shields.io/badge/maintained%20%3F-no-red.svg)](https://github.com/Sibiraj-S/ui-router-breadcrumbs)
-
+# ui-router-breadcrumbs [![Build Status](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs.svg?branch=master)](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs)
 
 This is a simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
 
@@ -14,6 +13,7 @@ You can directly clone/download [here][ui-router-breadcrumbs]
 ```bash
 git clone git@github.com:Sibiraj-S/ui-router-breadcrumbs.git
 ```
+
 or use cdn
 
 ##### Minified
@@ -29,6 +29,7 @@ or use cdn
 //unpkg.com/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.js
 //unpkg.com/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.css
 ```
+
 or
 
 Install via Package managers such as [npm][npm] or [yarn][yarn]
@@ -73,6 +74,7 @@ in routes config
 ```
 
 and in your html
+
 ```html
 <ui-breadcrumb></ui-breadcrumb>
 ```
@@ -94,7 +96,6 @@ or can be provided as attribute in the directive which will override the default
 ```html
 <ui-breadcrumb abstract=true></ui-breadcrumb>
 ```
-
 
 [uiRouter]: https://ui-router.github.io/
 [ngSanitize]: https://docs.angularjs.org/api/ngSanitize
