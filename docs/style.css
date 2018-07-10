@@ -33,6 +33,12 @@ body .contain .col40 {
   padding: 15px;
   flex-basis: 40%;
 }
+body .contain .col40 pre {
+  background-color: #e9ecef;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
 body .contain .col60 {
   padding: 15px;
   flex-basis: 60%;

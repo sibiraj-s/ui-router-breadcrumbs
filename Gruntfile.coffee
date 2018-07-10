@@ -52,26 +52,6 @@ module.exports = (grunt) ->
           'dist/ui-router-breadcrumbs.js': ['dist/ui-router-breadcrumbs.js']
           'dist/ui-router-breadcrumbs.css': ['dist/ui-router-breadcrumbs.css']
 
-    watch:
-      coffeescript:
-        files: ['src/*.coffee']
-        tasks: ['default']
-      sass:
-        files: ['src/**/*.scss']
-        tasks: ['sass']
-      cssMin:
-        files: ['dist/ui-router-breadcrumbs.css']
-        tasks: ['cssmin']
-      demoCss:
-        files: ['docs/**/*.scss']
-        tasks: ['sass']
-      demoHtml:
-        files: ['docs/**/*.html']
-      demoJs:
-        files: ['docs/**/*.js']
-      options:
-        livereload: true
-
     uglify:
       options:
         sourceMap: true
@@ -97,6 +77,26 @@ module.exports = (grunt) ->
           livereload: true
           open: true,
           hostname: 'localhost'
+
+    watch:
+      coffeescript:
+        files: ['src/*.coffee']
+        tasks: ['default']
+      sass:
+        files: ['src/**/*.scss', 'docs/**/*.scss']
+        tasks: ['sass']
+      css:
+        files: ['dist/**/*.css', 'docs/**/*.css']
+        options:
+          livereload: true
+      html:
+        files: ['docs/**/*.html']
+        options:
+          livereload: true
+      js:
+        files: ['docs/**/*.js', 'dist/**/*.js']
+        options:
+          livereload: true
 
   # Grunt task(s).
   grunt.registerTask "default", ["coffeelint", "coffee"]
