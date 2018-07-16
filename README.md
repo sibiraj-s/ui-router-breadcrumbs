@@ -1,4 +1,4 @@
-# ui-router-breadcrumbs [![Build Status](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs.svg?branch=master)](https://travis-ci.org/Sibiraj-S/ui-router-breadcrumbs)
+# ui-router-breadcrumbs [![Build Status](https://travis-ci.com/Sibiraj-S/ui-router-breadcrumbs.svg?branch=master)](https://travis-ci.com/Sibiraj-S/ui-router-breadcrumbs)
 
 This is a simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
 
