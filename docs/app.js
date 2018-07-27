@@ -1,18 +1,20 @@
+'use strict';
+
 var app = angular.module('myApp', ['ui.router', 'ngSanitize', 'uiBreadcrumbs']);
 
 app.config(['$stateProvider', '$urlRouterProvider',
-  function($stateProvider, $urlRouterProvider) {
+  function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
 
     $urlRouterProvider.when('/', '/home');
 
     $stateProvider.state('app', {
-        abstract: true,
-        data: {
-          label: 'App',
-        }
-      })
+      abstract: true,
+      data: {
+        label: 'App',
+      }
+    })
 
       .state('app.home', {
         url: '/home',
