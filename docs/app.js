@@ -12,14 +12,14 @@ app.config(['$stateProvider', '$urlRouterProvider',
     $stateProvider.state('app', {
       abstract: true,
       data: {
-        label: 'App',
+        label: 'App'
       }
     })
 
       .state('app.home', {
         url: '/home',
         data: {
-          label: 'Home',
+          label: 'Home'
         },
         views: {
           'content@': {
@@ -31,7 +31,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
       .state('app.home.usage', {
         url: '/usage',
         data: {
-          label: 'Usage',
+          label: 'Usage'
         },
         views: {
           'content@': {
@@ -43,7 +43,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
       .state('app.home.usage.options', {
         url: '/options',
         data: {
-          label: 'Options',
+          label: 'Options'
         },
         views: {
           'content@': {
