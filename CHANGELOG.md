@@ -11,6 +11,19 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## Unreleased
+
+#### Dependency Updates
+
+* update eslint to v5.5.0 ([14237d4](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/14237d4))
+* update grunt-contrib-uglify to v4.0.0 ([14237d4](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/14237d4))
+* update grunt-cofeelintr to v1.1.1 ([3c0125dc](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/3c0125dc))
+
+#### Internal
+
+* apply standardjs rules to eslint ([738c2d5](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/738c2d5))
+* use two space indentation instead of four ([5d4e534](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/5d4e534))
+
 ## v1.2.2 (2018-07-27)
 
 Just a Maintenance Patch
