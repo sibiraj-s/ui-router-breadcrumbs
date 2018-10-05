@@ -15,14 +15,14 @@ All notable changes to this project will be documented in this file.
 
 #### Dependency Updates
 
-* update eslint to v5.5.0 ([14237d4](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/14237d4))
-* update grunt-contrib-uglify to v4.0.0 ([14237d4](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/14237d4))
-* update grunt-cofeelintr to v1.1.1 ([3c0125dc](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/3c0125dc))
+* update eslint to v5.5.0 ([14237d4](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/14237d4))
+* update grunt-contrib-uglify to v4.0.0 ([14237d4](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/14237d4))
+* update grunt-cofeelintr to v1.1.1 ([3c0125dc](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3c0125dc))
 
 #### Internal
 
-* apply standardjs rules to eslint ([738c2d5](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/738c2d5))
-* use two space indentation instead of four ([5d4e534](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/5d4e534))
+* apply standardjs rules to eslint ([738c2d5](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/738c2d5))
+* use two space indentation instead of four ([5d4e534](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/5d4e534))
 
 ## v1.2.2 (2018-07-27)
 
@@ -30,11 +30,11 @@ Just a Maintenance Patch
 
 #### Internal
 
-* use eslint to lint javascript files ([fec093f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/fec093f))
-* prevent direct execution of `npm publish` ([fec093f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/fec093f))
-* remove commitizen and cz-conventional-changelog dependencies ([fec093f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/fec093f))
-* run travis builds in trusty environments ([fec093f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/fec093f))
-* replace grunt-coffeelint with grunt-coffeelintr ([fec093f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/fec093f))
+* use eslint to lint javascript files ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+* prevent direct execution of `npm publish` ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+* remove commitizen and cz-conventional-changelog dependencies ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+* run travis builds in trusty environments ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+* replace grunt-coffeelint with grunt-coffeelintr ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
 
 ## v1.2.1 (2018-07-16)
 
@@ -52,7 +52,7 @@ Just a Maintenance Patch
 
 #### Features
 
-* add `active` class to active breadcrumbs ([f49b16f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/f49b16f))
+* add `active` class to active breadcrumbs ([f49b16f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f49b16f))
 
 #### Internal
 
@@ -64,20 +64,20 @@ Just a Maintenance Patch
 
 #### Breaking Changes
 
-* refactor the HTML snippet and styles for breadcrumbs ([f49b16f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/f49b16f))
+* refactor the HTML snippet and styles for breadcrumbs ([f49b16f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f49b16f))
 
 ## v1.1.6 (2018-03-27)
 
 #### Internal
 
-* add post build scripts ([0f345b6](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/0f345b6))
-* add shebang lines to shell scritps ([674dfda](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/674dfda))
-* use yarn instead of npm ([b8cd5dd](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/b8cd5dd))
+* add post build scripts ([0f345b6](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/0f345b6))
+* add shebang lines to shell scritps ([674dfda](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/674dfda))
+* use yarn instead of npm ([b8cd5dd](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/b8cd5dd))
 
 #### Dependency Updates
 
-* update devDependencies ([176a47f](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/176a47f))
-* update dependencies in demo page ([18af54e](https://github.com/Sibiraj-S/ui-router-breadcrumbs/commit/18af54e))
+* update devDependencies ([176a47f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/176a47f))
+* update dependencies in demo page ([18af54e](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/18af54e))
 
 ## v1.1.5 (2017-11-28)
 

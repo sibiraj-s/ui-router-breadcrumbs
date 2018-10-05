@@ -1,4 +1,4 @@
-# ui-router-breadcrumbs [![Build Status](https://travis-ci.com/Sibiraj-S/ui-router-breadcrumbs.svg?branch=master)](https://travis-ci.com/Sibiraj-S/ui-router-breadcrumbs)
+# ui-router-breadcrumbs [![Build Status](https://travis-ci.com/sibiraj-s/ui-router-breadcrumbs.svg?branch=master)](https://travis-ci.com/sibiraj-s/ui-router-breadcrumbs)
 
 This is a simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router
 
@@ -11,7 +11,7 @@ live demo [here][demo]
 You can directly clone/download [here][ui-router-breadcrumbs]
 
 ```bash
-git clone git@github.com:Sibiraj-S/ui-router-breadcrumbs.git
+git clone git@github.com:sibiraj-s/ui-router-breadcrumbs.git
 ```
 
 or use cdn
@@ -102,5 +102,5 @@ or can be provided as attribute in the directive which will override the default
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/
 [github]: https://sibiraj-s.github.io/
-[ui-router-breadcrumbs]: https://github.com/Sibiraj-S/ui-router-breadcrumbs
+[ui-router-breadcrumbs]: https://github.com/sibiraj-s/ui-router-breadcrumbs
 [demo]: https://sibiraj-s.github.io/ui-router-breadcrumbs/
