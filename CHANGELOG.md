@@ -11,18 +11,24 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
-## Unreleased
+## v1.2.3 (2018-10-05)
 
 #### Dependency Updates
 
-* update eslint to v5.5.0 ([14237d4](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/14237d4))
 * update grunt-contrib-uglify to v4.0.0 ([14237d4](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/14237d4))
 * update grunt-cofeelintr to v1.1.1 ([3c0125dc](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3c0125dc))
+* update eslint to v5.6.1 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+* update eslint-plugin-promise to v4.0.1 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+* update grunt-contrib-connect to v2.0.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+* update grunt-contrib-cssmin to v3.0.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+* update husky to v1.1.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
 
 #### Internal
 
 * apply standardjs rules to eslint ([738c2d5](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/738c2d5))
 * use two space indentation instead of four ([5d4e534](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/5d4e534))
+* remove vscode settings in favour of editorconfig ([1f6333a](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/1f6333a))
+* update github username ([31bba58](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/31bba58))
 
 ## v1.2.2 (2018-07-27)
 
