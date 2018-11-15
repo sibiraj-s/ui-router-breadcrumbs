@@ -2,6 +2,12 @@
   "name": "ui-router-breadcrumbs",
   "version": "1.2.3",
   "description": "A Simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router",
+  "private": true,
+  "author": "Sibiraj",
+  "license": "MIT",
+  "repository": "https://github.com/sibiraj-s/ui-router-breadcrumbs.git",
+  "bugs": "https://github.com/sibiraj-s/ui-router-breadcrumbs/issues",
+  "homepage": "https://github.com/sibiraj-s/ui-router-breadcrumbs#readme",
   "scripts": {
     "build": "grunt build",
     "develop": "grunt develop",
@@ -15,11 +21,6 @@
     "test": "npm run lint",
     "watch": "grunt watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sibiraj-s/ui-router-breadcrumbs.git"
-  },
-  "private": true,
   "keywords": [
     "angular-breadcrumbs",
     "ui-router-breadcrumbs",
@@ -27,12 +28,6 @@
     "ui-router",
     "angularjs-breadcrumbs"
   ],
-  "author": "Sibiraj",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sibiraj-s/ui-router-breadcrumbs/issues"
-  },
-  "homepage": "https://github.com/sibiraj-s/ui-router-breadcrumbs#readme",
   "peerDependencies": {
     "@uirouter/angularjs": ">=1.0.5",
     "angular": ">=1.6.0",
