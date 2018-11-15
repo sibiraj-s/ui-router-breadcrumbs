@@ -15,11 +15,15 @@
 <body>
   <div class="contain">
     <div class="col40">
-      <a class="github-button" href="https://github.com/sibiraj-s" aria-label="Follow @sibiraj-s on GitHub">Follow @sibiraj-s</a>
-      <a class="github-button" href="https://github.com/sibiraj-s/ui-router-breadcrumbs/fork" data-icon="octicon-repo-forked" aria-label="Fork sibiraj-s/ui-router-breadcrumbs on GitHub">Fork</a>
-      <a class="github-button" href="https://github.com/sibiraj-s/ui-router-breadcrumbs/archive/master.zip" data-icon="octicon-cloud-download"
-        aria-label="Download sibiraj-s/ui-router-breadcrumbs on GitHub">Download ui-router-breadcrumbs</a>
-      <br>
+      <div id="github-badges">
+        <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs/fork" aria-label="Fork sibiraj-s/ui-router-breadcrumbs on GitHub"
+          target="_blank">
+          <img src="https://img.shields.io/badge/Fork----.svg?style=social&label=Fork&logo=git" alt="Follow @sibiraj-s">
+        </a>
+        <a href="https://github.com/sibiraj-s" aria-label="Follow @sibiraj-s on GitHub" target="_blank">
+          <img src="https://img.shields.io/github/followers/sibiraj-s.svg?style=social&label=Follow @sibiraj-s" alt="Fork">
+        </a>
+      </div>
       <br>
       <h3>ui-router-breadcrumbs demo</h3>
       <br>
@@ -48,7 +52,8 @@
   &lt;script src="../ui-router-breadcrumbs.min.js"&gt;&lt;/script&gt;
       </code></pre>
       <p>add the
-        <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs" target="_blank">uiBreadcrumbs</a> dependency to the module</p>
+        <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs" target="_blank">uiBreadcrumbs</a> dependency to
+        the module</p>
       <pre><code class="javascript">
   angular.module('myApp', ['uiBreadcrumbs'])
       </code></pre>
@@ -89,8 +94,6 @@
   <script type="text/javascript" src="app.js"></script>
   <!-- highlight js -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
   </script>
