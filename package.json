@@ -8,6 +8,9 @@
   "repository": "https://github.com/sibiraj-s/ui-router-breadcrumbs.git",
   "bugs": "https://github.com/sibiraj-s/ui-router-breadcrumbs/issues",
   "homepage": "https://github.com/sibiraj-s/ui-router-breadcrumbs#readme",
+  "engines": {
+    "node": "^10"
+  },
   "scripts": {
     "build": "grunt build",
     "develop": "grunt develop",
