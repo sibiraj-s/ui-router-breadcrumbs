@@ -69,7 +69,7 @@ in routes config
     data: {
       label: 'Home', //label to show in breadcrumbs
     },
-    templateUrl: 'templates/home.html'
+    templateUrl: 'templates/home.html',
 })
 ```
 
