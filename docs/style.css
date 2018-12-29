@@ -10,7 +10,7 @@ body {
   min-width: 1200px;
   overflow: hidden;
   overflow-x: scroll;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
 body .navbar {
