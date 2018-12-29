@@ -11,6 +11,23 @@ All notable changes to this project will be documented in this file.
 > - Documentation
 > - Internal
 
+## v1.2.4 (2018-12-29)
+
+#### Internal
+
+- update angular.js to v1.7.5 in demo page ([3b63453](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3b63453))
+- update angularjs-sanitize to v1.7.5 in demo page ([3b63453](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3b63453))
+- extend LICENSE to year 2019 ([fb51953](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fb51953))
+- replace `eslint-config-standard` with `eslint-config-airbnb-base` ([3b63453](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3b63453))
+- replace `grunt-contrib-sass` with `grunt-sass`
+- migrate from `unpkg` cdn to `jsdelivr` ([a343feb](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/a343feb))
+
+#### Dependency Updates
+
+- update husky to v1.3.1 ([3b63453](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3b63453))
+- update eslint to v5.11.1 ([3b63453](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3b63453))
+- update grunt-coffeelintr to v1.1.2 ([3b63453](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3b63453))
+
 ## v1.2.3 (2018-10-05)
 
 #### Dependency Updates

@@ -1,6 +1,6 @@
 {
   "name": "ui-router-breadcrumbs",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A Simple directive that creates breadcrumbs on the fly for AngularJs pages using angular-ui-router",
   "private": true,
   "author": "Sibiraj",
