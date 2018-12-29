@@ -19,15 +19,15 @@ or use cdn
 ##### Minified
 
 ```bash
-//unpkg.com/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js
-//unpkg.com/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.css
+//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js
+//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.css
 ```
 
 ##### Pretty Printed
 
 ```bash
-//unpkg.com/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.js
-//unpkg.com/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.css
+//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.js
+//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.css
 ```
 
 or
