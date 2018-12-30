@@ -32,20 +32,20 @@ All notable changes to this project will be documented in this file.
 
 #### Dependency Updates
 
-* update grunt-contrib-uglify to v4.0.0 ([14237d4](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/14237d4))
-* update grunt-cofeelintr to v1.1.1 ([3c0125dc](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3c0125dc))
-* update eslint to v5.6.1 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
-* update eslint-plugin-promise to v4.0.1 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
-* update grunt-contrib-connect to v2.0.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
-* update grunt-contrib-cssmin to v3.0.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
-* update husky to v1.1.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+- update grunt-contrib-uglify to v4.0.0 ([14237d4](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/14237d4))
+- update grunt-cofeelintr to v1.1.1 ([3c0125dc](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3c0125dc))
+- update eslint to v5.6.1 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+- update eslint-plugin-promise to v4.0.1 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+- update grunt-contrib-connect to v2.0.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+- update grunt-contrib-cssmin to v3.0.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
+- update husky to v1.1.0 ([230e92d](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/230e92d))
 
 #### Internal
 
-* apply standardjs rules to eslint ([738c2d5](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/738c2d5))
-* use two space indentation instead of four ([5d4e534](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/5d4e534))
-* remove vscode settings in favour of editorconfig ([1f6333a](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/1f6333a))
-* update github username ([31bba58](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/31bba58))
+- apply standardjs rules to eslint ([738c2d5](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/738c2d5))
+- use two space indentation instead of four ([5d4e534](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/5d4e534))
+- remove vscode settings in favour of editorconfig ([1f6333a](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/1f6333a))
+- update github username ([31bba58](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/31bba58))
 
 ## v1.2.2 (2018-07-27)
 
@@ -53,72 +53,72 @@ Just a Maintenance Patch
 
 #### Internal
 
-* use eslint to lint javascript files ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
-* prevent direct execution of `npm publish` ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
-* remove commitizen and cz-conventional-changelog dependencies ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
-* run travis builds in trusty environments ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
-* replace grunt-coffeelint with grunt-coffeelintr ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+- use eslint to lint javascript files ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+- prevent direct execution of `npm publish` ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+- remove commitizen and cz-conventional-changelog dependencies ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+- run travis builds in trusty environments ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
+- replace grunt-coffeelint with grunt-coffeelintr ([fec093f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/fec093f))
 
 ## v1.2.1 (2018-07-16)
 
 #### Internal
 
-* remove pullapprove
-* migrate to travis-ci.com
+- remove pullapprove
+- migrate to travis-ci.com
 
 #### Dependency Updates
 
-* update devDependencies, which removes vulnerable packages
-* updated dependencies in demo page
+- update devDependencies, which removes vulnerable packages
+- updated dependencies in demo page
 
 ## v1.2.0 (2018-05-08)
 
 #### Features
 
-* add `active` class to active breadcrumbs ([f49b16f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f49b16f))
+- add `active` class to active breadcrumbs ([f49b16f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f49b16f))
 
 #### Internal
 
-* style tweaks for docs
+- style tweaks for docs
 
 #### Dependency Updates
 
-* update devDependencies
+- update devDependencies
 
 #### Breaking Changes
 
-* refactor the HTML snippet and styles for breadcrumbs ([f49b16f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f49b16f))
+- refactor the HTML snippet and styles for breadcrumbs ([f49b16f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f49b16f))
 
 ## v1.1.6 (2018-03-27)
 
 #### Internal
 
-* add post build scripts ([0f345b6](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/0f345b6))
-* add shebang lines to shell scritps ([674dfda](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/674dfda))
-* use yarn instead of npm ([b8cd5dd](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/b8cd5dd))
+- add post build scripts ([0f345b6](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/0f345b6))
+- add shebang lines to shell scritps ([674dfda](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/674dfda))
+- use yarn instead of npm ([b8cd5dd](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/b8cd5dd))
 
 #### Dependency Updates
 
-* update devDependencies ([176a47f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/176a47f))
-* update dependencies in demo page ([18af54e](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/18af54e))
+- update devDependencies ([176a47f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/176a47f))
+- update dependencies in demo page ([18af54e](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/18af54e))
 
 ## v1.1.5 (2017-11-28)
 
 #### INTERNAL
 
-* drop bower support
-* publish only `dist/` folder to npm
-* move dependencies to peerDependencies
+- drop bower support
+- publish only `dist/` folder to npm
+- move dependencies to peerDependencies
 
 #### Dependency Updates
 
-* update cz-conventional-changelog to v2.1.0
-* update grunt-contrib-uglify to v3.2.1
-* update grunt-contrib-coffee to v2.0.0
+- update cz-conventional-changelog to v2.1.0
+- update grunt-contrib-uglify to v3.2.1
+- update grunt-contrib-coffee to v2.0.0
 
 #### BREAKING CHANGES
 
-* bower installations will not be supported anymore, use npm or yarn
+- bower installations will not be supported anymore, use npm or yarn
 
 ## v1.1.4 (2017-08-28)
 
@@ -140,62 +140,62 @@ The label is now given as
 
 #### Bug Fixes
 
-* fixes the dependency injection error with the minified js in previous release
-* prevent throwing error when strict-di mode is enabled
+- fixes the dependency injection error with the minified js in previous release
+- prevent throwing error when strict-di mode is enabled
 
 ## v1.1.2 (2017-07-07)
 
 #### Performance Improvements
 
-* follow modular/syntax approach for ui-router-breadcrumbs module
+- follow modular/syntax approach for ui-router-breadcrumbs module
 
 ## v1.1.1 (2017-07-07)
 
 #### Internal
 
-* fix invalid bower dependency for angular-ui-router
+- fix invalid bower dependency for angular-ui-router
 
 ## v1.1.0 (2017-07-06)
 
-#### Performance Improvements 
+#### Performance Improvements
 
-* Improves stability 
+- Improves stability
 
 #### Bug Fixes
 
-* Fixed breadcrumbs not generated in few applications
+- Fixed breadcrumbs not generated in few applications
 
 ## v1.0.5 (2017-07-05)
 
 #### Bug Fixes
 
-* Prevent multiple function to update breadcrumb call on page load
+- Prevent multiple function to update breadcrumb call on page load
 
 ## v1.0.4 (2017-07-05)
 
 #### Bug Fixes
 
-* renders breadcrumb correctly on statechange
-* abstract classes are now parsed as boolean
-* an error in loop is now fixed
+- renders breadcrumb correctly on statechange
+- abstract classes are now parsed as boolean
+- an error in loop is now fixed
 
 ## v1.0.3 (2017-07-05)
 
 #### Performance Improvements
 
-* state transitions are now watched within the directive
+- state transitions are now watched within the directive
 
 ## v1.0.2 (2017-07-04)
 
 #### Documentation
 
-* update documentation
+- update documentation
 
 ## v1.0.1 (2017-07-04)
 
 #### Documentation
 
-* update broken links in demo
+- update broken links in demo
 
 ## v1.0.0 (2017-07-04)
 
