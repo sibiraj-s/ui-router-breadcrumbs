@@ -1,9 +1,0 @@
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item" ng-repeat="data in $breadcrumbs" ui-sref-active="active">
-      <a ui-sref="{{data.abstract || data.name}}" ng-class="{'disabled': data.abstract}">
-        {{data.data.label || data.name}}
-      </a>
-    </li>
-  </ol>
-</nav>
