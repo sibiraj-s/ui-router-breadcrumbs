@@ -40,16 +40,13 @@
   yarn add ui-router-breadcrumbs
   </code></pre>
       <h3>Usage</h3>
-      <p> import the modules required for ui-router-breadcrumbs. It is necessary to include
-        <a href="https://docs.angularjs.org/api/ngSanitize" target="_blank">ngSanitize</a> and
-        <a href="https://ui-router.github.io/" target="_blank">ui.router</a> for ui-router-breadcrumbs to work</p>
+      <p> import the modules required for ui-router-breadcrumbs
       <pre><code class="html">
-  &lt;link rel="stylesheet" href="../ui-router-breadcrumbs.min.css"&gt;
+  &lt;link rel="stylesheet" href="ui-router-breadcrumbs.min.css"&gt;
 
-  &lt;script src="angular/angular.min.js"&gt;&lt;/script&gt;
-  &lt;script src="angular-sanitize/angular-sanitize.min.js"&gt;&lt;/script&gt;
-  &lt;script src="angular-animate/angular-animate.min.js"&gt;&lt;/script&gt;
-  &lt;script src="../ui-router-breadcrumbs.min.js"&gt;&lt;/script&gt;
+  &lt;script src="angular.min.js"&gt;&lt;/script&gt;
+  &lt;script src="angular-ui-router.min.js"&gt;&lt;/script&gt;
+  &lt;script src="ui-router-breadcrumbs.min.js"&gt;&lt;/script&gt;
       </code></pre>
       <p>add the
         <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs" target="_blank">uiBreadcrumbs</a> dependency to
@@ -86,10 +83,10 @@
     </div>
   </div>
   <!-- dependencies -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/angular@1.7.5/angular.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/angular-sanitize@1.7.5/angular-sanitize.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/angular@1.7.5/angular.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/@uirouter/angularjs@1.0.20/release/angular-ui-router.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js"></script>
+  <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js"></script> -->
+  <script type="text/javascript" src="../dist/ui-router-breadcrumbs.js"></script>
   <!-- app scripts -->
   <script type="text/javascript" src="app.js"></script>
   <!-- highlight js -->

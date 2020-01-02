@@ -90,7 +90,7 @@ $uiBreadcrumb.$inject = ['$state', '$rootScope', 'breadcrumbsService']
 $breadcrumbsService.$inject = ['$state', 'breadcrumbconfig']
 
 # define angular module
-angular.module 'uiBreadcrumbs', ['ui.router', 'ngSanitize']
+angular.module 'uiBreadcrumbs', ['ui.router']
   .directive('uiBreadcrumb', $uiBreadcrumb)
   .provider('breadcrumbconfig', $breadcrumbconfig)
   .factory('breadcrumbsService', $breadcrumbsService)

@@ -1,4 +1,4 @@
-const app = angular.module('myApp', ['ui.router', 'ngSanitize', 'uiBreadcrumbs']);
+const app = angular.module('myApp', ['ui.router', 'uiBreadcrumbs']);
 
 app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
   $urlRouterProvider.otherwise('/home');

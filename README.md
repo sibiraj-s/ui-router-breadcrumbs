@@ -42,17 +42,16 @@ yarn add ui-router-breadcrumbs
 
 ### Usage
 
-Import the modules required for ui-router-breadcrumbs. It is necessary to include [ngSanitize][ngSanitize] and [ui.router][uiRouter] for ui-router-breadcrumbs to work
+Import the modules required for ui-router-breadcrumbs.
 
  ```html
 <-- styles -->
-<link rel="stylesheet" href="../ui-router-breadcrumbs.min.css">
+<link rel="stylesheet" href="ui-router-breadcrumbs.min.css">
 
 <-- scripts -->
-<script src="angular/angular.min.js"></script>
-<script src="angular-sanitize/angular-sanitize.min.js"></script>
-<script src="angular-animate/angular-animate.min.js"></script>
-<script src="../ui-router-breadcrumbs.min.js"></script>
+<script src="angular.min.js"></script>
+<script src="angular-ui-router.min.js"></script>
+<script src="ui-router-breadcrumbs.min.js"></script>
  ```
 
 add `uiBreadcrumbs` dependency to the module
@@ -97,8 +96,6 @@ or can be provided as attribute in the directive which will override the default
 <ui-breadcrumb abstract=true></ui-breadcrumb>
 ```
 
-[uiRouter]: https://ui-router.github.io/
-[ngSanitize]: https://docs.angularjs.org/api/ngSanitize
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/
 [github]: https://sibiraj-s.github.io/
