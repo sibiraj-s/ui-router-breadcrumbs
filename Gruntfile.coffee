@@ -67,14 +67,6 @@ module.exports = (grunt) ->
         files:
           'dist/ui-router-breadcrumbs.min.js': ['dist/ui-router-breadcrumbs.js']
 
-    ngAnnotate:
-      options:
-        singleQuotes: true
-
-      uiBreadcrumbs:
-        files:
-          'dist/ui-router-breadcrumbs.js': ['dist/ui-router-breadcrumbs.js']
-
     connect:
       server:
         options:
@@ -109,6 +101,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'serve', ['sass', 'connect']
   grunt.registerTask 'lint', ['coffeelintr', 'eslint']
   grunt.registerTask 'develop', ['default', 'watch']
-  grunt.registerTask 'build', ['default', 'ngAnnotate', 'sass', 'concat', 'uglify', 'cssmin']
+  grunt.registerTask 'build', ['default', 'sass', 'concat', 'uglify', 'cssmin']
 
   return

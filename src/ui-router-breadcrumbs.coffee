@@ -1,7 +1,7 @@
 'use strict'
 
 # uiBreadcrumb directive
-$uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
+$uiBreadcrumbDirective = ($state, $rootScope, breadcrumbsService) ->
   restrict: 'E',
   transclude: true
   template: '<nav aria-label="breadcrumb">'+
@@ -29,10 +29,8 @@ $uiBreadcrumb = ($state, $rootScope, breadcrumbsService) ->
       return
     return
 
-# END uiBreadcrumb DIRECTIVE
-
 # uiBreadcrumbsprovider
-$breadcrumbconfig = ->
+$breadcrumbProvider = ->
 
   abstract = false
 
@@ -46,7 +44,6 @@ $breadcrumbconfig = ->
   $get: ->
     abstract
 
-# END breadcrumbconfig
 
 # breadcrumbsService
 $breadcrumbsService = ($state, breadcrumbconfig) ->
@@ -83,14 +80,13 @@ $breadcrumbsService = ($state, breadcrumbconfig) ->
   getbreadcrumbs: (abstract) ->
     crateBreadcrumbs(abstract)
 
-# END breadcrumbsService
-
 # dependency injection
-$uiBreadcrumb.$inject = ['$state', '$rootScope', 'breadcrumbsService']
+$breadcrumbProvider.$inject = []
+$uiBreadcrumbDirective.$inject = ['$state', '$rootScope', 'breadcrumbsService']
 $breadcrumbsService.$inject = ['$state', 'breadcrumbconfig']
 
 # define angular module
 angular.module 'uiBreadcrumbs', ['ui.router']
-  .directive('uiBreadcrumb', $uiBreadcrumb)
-  .provider('breadcrumbconfig', $breadcrumbconfig)
+  .provider('breadcrumbconfig', $breadcrumbProvider)
   .factory('breadcrumbsService', $breadcrumbsService)
+  .directive('uiBreadcrumb', $uiBreadcrumbDirective)
