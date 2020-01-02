@@ -1,8 +1,5 @@
-const app = angular.module('myApp', ['ui.router', 'uiBreadcrumbs']);
-
-app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
+const config = ($stateProvider, $urlRouterProvider) => {
   $urlRouterProvider.otherwise('/home');
-
   $urlRouterProvider.when('/', '/home');
 
   $stateProvider
@@ -48,4 +45,9 @@ app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterP
         },
       },
     });
-}]);
+};
+
+config.$inject = ['$stateProvider', '$urlRouterProvider'];
+
+const app = angular.module('myApp', ['ui.router', 'uiBreadcrumbs']);
+app.config(config);

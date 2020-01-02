@@ -44,32 +44,32 @@ yarn add ui-router-breadcrumbs
 
 Import the modules required for ui-router-breadcrumbs.
 
- ```html
+```html
 <-- styles -->
-<link rel="stylesheet" href="ui-router-breadcrumbs.min.css">
+<link rel="stylesheet" href="ui-router-breadcrumbs.min.css" />
 
 <-- scripts -->
 <script src="angular.min.js"></script>
 <script src="angular-ui-router.min.js"></script>
 <script src="ui-router-breadcrumbs.min.js"></script>
- ```
+```
 
 add `uiBreadcrumbs` dependency to the module
 
 ```js
-angular.module('myApp', ['uiBreadcrumbs'])
+angular.module('myApp', ['uiBreadcrumbs']);
 ```
 
 in routes config
 
 ```js
-.state('app.home', {
-    url: '/home',
-    data: {
-      label: 'Home', //label to show in breadcrumbs
-    },
-    templateUrl: 'templates/home.html',
-})
+$stateProvider.state('app.home', {
+  url: '/home',
+  data: {
+    label: 'Home' //label to show in breadcrumbs
+  },
+  templateUrl: 'templates/home.html'
+});
 ```
 
 and in your html
@@ -85,15 +85,18 @@ you can specify to show or hide abstract states
 can provide globally as
 
 ```js
-app.config(['breadcrumbconfigProvider', function(breadcrumbconfigProvider) {
+const config = breadcrumbconfigProvider => {
   breadcrumbconfigProvider.setAbstract(false);
-}]);
+};
+
+config.$inject = ['breadcrumbconfigProvider'];
+app.config(config);
 ```
 
 or can be provided as attribute in the directive which will override the default configuration
 
 ```html
-<ui-breadcrumb abstract=true></ui-breadcrumb>
+<ui-breadcrumb abstract="true"></ui-breadcrumb>
 ```
 
 [npm]: https://www.npmjs.com/
