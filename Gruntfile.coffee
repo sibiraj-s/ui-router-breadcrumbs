@@ -1,6 +1,5 @@
-'use strict'
-
 dartSass = require('sass')
+loadGruntTasks = require('load-grunt-tasks')
 
 banner = '/*!\n * @module <%= pkg.name %>\n' +
   ' * @description <%= pkg.description %>\n' +
@@ -10,10 +9,14 @@ banner = '/*!\n * @module <%= pkg.name %>\n' +
   ' */\n\n';
 
 module.exports = (grunt) ->
-  require('load-grunt-tasks')(grunt)
+  loadGruntTasks(grunt)
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
+
+    clean:
+      outDir:
+        src: 'dist/'
 
     coffeelintr:
       options:
@@ -38,7 +41,7 @@ module.exports = (grunt) ->
       demo:
         files:
           'docs/style.css': 'docs/style.scss'
-      dist:
+      lib:
         files:
           'dist/ui-router-breadcrumbs.css': 'src/ui-router-breadcrumbs.scss'
 
@@ -66,6 +69,25 @@ module.exports = (grunt) ->
       target:
         files:
           'dist/ui-router-breadcrumbs.min.js': ['dist/ui-router-breadcrumbs.js']
+
+    copy:
+      default:
+        expand: true
+        src: ['LICENSE', 'README.md', 'CHANGELOG.md']
+        dest: 'dist/'
+      pkgJson:
+        expand: true
+        src: 'package.json'
+        dest: 'dist/',
+        options:
+          process: (data) ->
+            pkg = JSON.parse(data)
+            pkg.main = 'ui-router-breadcrumbs.min.js'
+            delete pkg.scripts
+            delete pkg.devDependencies
+            delete pkg.private
+            delete pkg.engines
+            JSON.stringify pkg, null, 2
 
     connect:
       server:
@@ -97,10 +119,10 @@ module.exports = (grunt) ->
           livereload: true
 
   # Grunt task(s).
-  grunt.registerTask 'default', ['coffeelintr', 'coffee']
+  grunt.registerTask 'default', ['coffee', 'sass:lib']
   grunt.registerTask 'serve', ['sass', 'connect']
   grunt.registerTask 'lint', ['coffeelintr', 'eslint']
   grunt.registerTask 'develop', ['default', 'watch']
-  grunt.registerTask 'build', ['default', 'sass', 'concat', 'uglify', 'cssmin']
+  grunt.registerTask 'build', ['clean', 'default', 'sass', 'concat', 'uglify', 'cssmin', 'copy']
 
   return
