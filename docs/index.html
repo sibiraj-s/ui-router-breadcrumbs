@@ -5,9 +5,11 @@
   <base href="ui-router-breadcrumbs">
   <meta charset="utf-8">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/atom-one-dark.min.css">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>UI Router Breadcrumbs</title>
 </head>
@@ -16,12 +18,13 @@
   <div class="contain">
     <div class="col40">
       <div id="github-badges">
-        <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs/fork" aria-label="Fork sibiraj-s/ui-router-breadcrumbs on GitHub"
-          target="_blank">
+        <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs/fork"
+          aria-label="Fork sibiraj-s/ui-router-breadcrumbs on GitHub" target="_blank">
           <img src="https://img.shields.io/badge/Fork----.svg?style=social&label=Fork&logo=git" alt="Follow @sibiraj-s">
         </a>
         <a href="https://github.com/sibiraj-s" aria-label="Follow @sibiraj-s on GitHub" target="_blank">
-          <img src="https://img.shields.io/github/followers/sibiraj-s.svg?style=social&label=Follow @sibiraj-s" alt="Fork">
+          <img src="https://img.shields.io/github/followers/sibiraj-s.svg?style=social&label=Follow @sibiraj-s"
+            alt="Fork">
         </a>
       </div>
       <br>
@@ -41,21 +44,21 @@
   </code></pre>
       <h3>Usage</h3>
       <p> import the modules required for ui-router-breadcrumbs
-      <pre><code class="html">
+        <pre><code class="html">
   &lt;link rel="stylesheet" href="ui-router-breadcrumbs.min.css"&gt;
 
   &lt;script src="angular.min.js"&gt;&lt;/script&gt;
   &lt;script src="angular-ui-router.min.js"&gt;&lt;/script&gt;
   &lt;script src="ui-router-breadcrumbs.min.js"&gt;&lt;/script&gt;
       </code></pre>
-      <p>add the
-        <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs" target="_blank">uiBreadcrumbs</a> dependency to
-        the module</p>
-      <pre><code class="javascript">
+        <p>add the
+          <a href="https://github.com/sibiraj-s/ui-router-breadcrumbs" target="_blank">uiBreadcrumbs</a> dependency to
+          the module</p>
+        <pre><code class="javascript">
   angular.module('myApp', ['uiBreadcrumbs'])
       </code></pre>
-      <p>in your router config</p>
-      <pre><code class="javascript">
+        <p>in your router config</p>
+        <pre><code class="javascript">
   .state('app.home', {
       url: '/home',
       data: {
@@ -64,29 +67,30 @@
       templateUrl: 'templates/home.html',
   })
       </code></pre>
-      <p>in your html</p>
-      <pre><code class="html">
+        <p>in your html</p>
+        <pre><code class="html">
   &lt;ui-breadcrumb&gt;&lt;/ui-breadcrumb&gt;
       </code></pre>
-      <h3>Options</h3>
-      <p>you can specify to show or hide abstract states</p>
-      <p>can provide globally as</p>
-      <pre><code class="js">
+        <h3>Options</h3>
+        <p>you can specify to show or hide abstract states</p>
+        <p>can provide globally as</p>
+        <pre><code class="js">
   app.config(['breadcrumbconfigProvider', function(breadcrumbconfigProvider) {
         breadcrumbconfigProvider.setAbstract(false);
   }]);
     </code></pre>
-      <p>or can be provided as attribute in the directive which will override the default configuration</p>
-      <pre><code class="html">
+        <p>or can be provided as attribute in the directive which will override the default configuration</p>
+        <pre><code class="html">
   &lt;ui-breadcrumb abstract=true&gt;&lt;/ui-breadcrumb&gt;
     </code></pre>
     </div>
   </div>
   <!-- dependencies -->
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/angular@1.7.5/angular.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/@uirouter/angularjs@1.0.20/release/angular-ui-router.min.js"></script>
-  <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js"></script> -->
-  <script type="text/javascript" src="../dist/ui-router-breadcrumbs.js"></script>
+  <script type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/@uirouter/angularjs@1.0.20/release/angular-ui-router.min.js"></script>
+  <script type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js"></script>
   <!-- app scripts -->
   <script type="text/javascript" src="app.js"></script>
   <!-- highlight js -->

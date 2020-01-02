@@ -86,39 +86,44 @@ module.exports = (grunt) ->
             delete pkg.engines
             JSON.stringify pkg, null, 2
 
-    connect:
-      server:
-        options:
-          base: './'
-          keepalive: true
-          livereload: true
-          open: true,
-          hostname: 'localhost'
+    browserSync:
+      bsFiles:
+        src: [
+          'docs/*.css',
+          'docs/**/*.html',
+          'docs/*.js',
+          'dist/*.js',
+          'dist/*.css'
+        ]
+      options:
+        watchTask: true
+        open: false
+        server:
+          baseDir: 'docs'
+          routes:
+            '/dist': 'dist'
+        rewriteRules: [{
+          match: '//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js',
+          replace: '/dist/ui-router-breadcrumbs.js',
+        }, {
+          match: '//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.css',
+          replace: '/dist/ui-router-breadcrumbs.css'
+        }]
 
     watch:
       coffeescript:
         files: ['src/*.coffee']
         tasks: ['default']
-      sass:
-        files: ['src/**/*.scss', 'docs/**/*.scss']
-        tasks: ['sass']
-      css:
-        files: ['dist/**/*.css', 'docs/**/*.css']
-        options:
-          livereload: true
-      html:
-        files: ['docs/**/*.html']
-        options:
-          livereload: true
-      js:
-        files: ['docs/**/*.js', 'dist/**/*.js']
-        options:
-          livereload: true
+      sass_lib:
+        files: ['src/**/*.scss']
+        tasks: ['sass:lib']
+      sass_demo:
+        files: ['docs/**/*.scss']
+        tasks: ['sass:demo']
 
   # Grunt task(s).
   grunt.registerTask 'default', ['coffee', 'sass:lib']
-  grunt.registerTask 'serve', ['sass', 'connect']
-  grunt.registerTask 'develop', ['default', 'watch']
+  grunt.registerTask 'serve', ['default', 'browserSync', 'watch']
   grunt.registerTask 'build', ['clean', 'default', 'sass', 'concat', 'uglify', 'cssmin', 'copy']
 
   return

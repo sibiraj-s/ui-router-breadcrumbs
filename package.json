@@ -12,16 +12,14 @@
     "node": ">=10"
   },
   "scripts": {
+    "serve": "grunt serve",
     "build": "grunt build",
-    "develop": "grunt develop",
     "lint:coffee": "grunt coffeelintr",
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint": "npm run lint:coffee && npm run lint:js",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run build",
-    "release": "sh ./scripts/release.sh",
-    "start": "grunt serve",
-    "watch": "grunt watch"
+    "release": "sh ./scripts/release.sh"
   },
   "keywords": [
     "angular-breadcrumbs",
@@ -42,11 +40,11 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1",
     "grunt": "^1.0.4",
+    "grunt-browser-sync": "^2.2.0",
     "grunt-coffeelintr": "^1.1.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-coffee": "^2.1.0",
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-uglify": "^4.0.1",
