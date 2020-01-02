@@ -23,9 +23,6 @@ module.exports = (grunt) ->
         configFile: 'coffeelint.json'
       source: ['src/ui-router-breadcrumbs.coffee', 'Gruntfile.coffee']
 
-    eslint:
-      target: ['docs/**/*.js', 'scripts/**/*.js']
-
     coffee:
       compileJoined:
         options:
@@ -121,7 +118,6 @@ module.exports = (grunt) ->
   # Grunt task(s).
   grunt.registerTask 'default', ['coffee', 'sass:lib']
   grunt.registerTask 'serve', ['sass', 'connect']
-  grunt.registerTask 'lint', ['coffeelintr', 'eslint']
   grunt.registerTask 'develop', ['default', 'watch']
   grunt.registerTask 'build', ['clean', 'default', 'sass', 'concat', 'uglify', 'cssmin', 'copy']
 

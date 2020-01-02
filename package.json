@@ -14,12 +14,13 @@
   "scripts": {
     "build": "grunt build",
     "develop": "grunt develop",
-    "lint": "grunt lint",
+    "lint:coffee": "grunt coffeelintr",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint": "npm run lint:coffee && npm run lint:js",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run build",
     "release": "sh ./scripts/release.sh",
     "start": "grunt serve",
-    "test": "npm run lint",
     "watch": "grunt watch"
   },
   "keywords": [
@@ -50,7 +51,6 @@
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-eslint": "^22.0.0",
     "grunt-sass": "^3.1.0",
     "husky": "^3.1.0",
     "load-grunt-tasks": "^5.1.0",
