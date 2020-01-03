@@ -82,25 +82,18 @@ and in your html
 
 you can specify to show or hide abstract states
 
-can provide globally as
-
 ```js
-const config = breadcrumbconfigProvider => {
-  breadcrumbconfigProvider.setAbstract(false);
+const config = breadcrumbProvider => {
+  breadcrumbProvider.configure({
+    abstract: true
+  });
 };
 
-config.$inject = ['breadcrumbconfigProvider'];
+config.$inject = ['breadcrumbProvider'];
 app.config(config);
-```
-
-or can be provided as attribute in the directive which will override the default configuration
-
-```html
-<ui-breadcrumb abstract="true"></ui-breadcrumb>
 ```
 
 [npm]: https://www.npmjs.com/
 [yarn]: https://yarnpkg.com/lang/en/
-[github]: https://sibiraj-s.github.io/
 [ui-router-breadcrumbs]: https://github.com/sibiraj-s/ui-router-breadcrumbs
 [demo]: https://sibiraj-s.github.io/ui-router-breadcrumbs/
