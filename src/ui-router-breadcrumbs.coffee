@@ -1,9 +1,47 @@
 'use strict'
 
+# uiBreadcrumbsprovider
+$breadcrumbProvider = ->
+  defaiultOptions =
+    abstract: false
+
+  options = {}
+
+  configure: (opts) ->
+    options = angular.extend {}, options, opts
+    return
+
+  $get: ->
+    options
+
+# breadcrumbsService
+$breadcrumbsService = ($state, breadcrumbconfig) ->
+  abstract = breadcrumbconfig.abstract
+
+  generateBreadcrumbs: ->
+    breadcrumbs = []
+    parentStates = []
+
+    # get parent state details
+    angular.forEach $state.$current.includes, (_, state) ->
+      if state isnt ''
+        parentState = $state.get(state).$$state().parent.self
+        if parentState.name isnt ''
+          if parentState.abstract and not abstract
+            return
+          parentStates.push parentState
+          return
+
+    # add current state to breadcrumbs
+    currentState = $state.current
+    breadcrumbs = [].concat parentStates, currentState
+
+    return breadcrumbs
+
 # uiBreadcrumb directive
-$uiBreadcrumbDirective = ($state, $rootScope, breadcrumbsService) ->
+$breadcrumbDirective = ($state, breadcrumbsService) ->
   restrict: 'E',
-  transclude: true
+  replace: true
   template: '<nav aria-label="breadcrumb">'+
   '  <ol class="breadcrumb">'+
   '    <li class="breadcrumb-item" ng-repeat="data in $breadcrumbs" ui-sref-active="active">'+
@@ -13,82 +51,20 @@ $uiBreadcrumbDirective = ($state, $rootScope, breadcrumbsService) ->
   '    </li>'+
   '  </ol>'+
   '</nav>'
-  link: (scope, element, attrs) ->
-
-    attrs.abstract = if attrs.abstract then attrs.abstract else false
-
-    abstract = JSON.parse(attrs.abstract)
-
-    render = ->
-      if scope.$breadcrumbs isnt breadcrumbsService.getbreadcrumbs(abstract)
-        scope.$breadcrumbs = breadcrumbsService.getbreadcrumbs(abstract)
-        return
-
-    # once the view content is updated
-    # breadcrumbs are updated
+  link: (scope) ->
+    # fetch breadcrumbs once the view content is updated
     scope.$on '$viewContentLoaded', ->
-      render()
+      scope.$breadcrumbs = breadcrumbsService.generateBreadcrumbs()
       return
     return
 
-# uiBreadcrumbsprovider
-$breadcrumbProvider = ->
-
-  abstract = false
-
-  setAbstract: (value) ->
-    # parse string to boolean
-    # if the input is not a boolean
-    value = JSON.parse(value)
-    abstract = value
-    return
-
-  $get: ->
-    abstract
-
-
-# breadcrumbsService
-$breadcrumbsService = ($state, breadcrumbconfig) ->
-
-  crateBreadcrumbs = (abstract) ->
-    abstract = if abstract then abstract else breadcrumbconfig
-    breadcrumbs = []
-    stateArray = []
-    parentStates = []
-
-    # gets all states
-    for i of $state.$current.includes
-      stateArray.push i
-
-    # get parent state details
-    for i of stateArray
-      if stateArray[i] isnt ''
-        if $state.get(stateArray[i]).$$state().parent.self.name isnt ''
-          parentStates.push($state.get(stateArray[i]).$$state().parent.self)
-
-    # if abstract is false
-    # removes abstract states from breadcrumbs
-    if not abstract
-      for i of parentStates
-        if not parentStates[i].abstract
-          breadcrumbs.push parentStates[i]
-    else
-      breadcrumbs = parentStates
-
-    # add current state to breadcrumbs
-    breadcrumbs.push $state.current
-    return breadcrumbs
-
-  getbreadcrumbs: (abstract) ->
-    crateBreadcrumbs(abstract)
-
 # dependency injection
 $breadcrumbProvider.$inject = []
-$uiBreadcrumbDirective.$inject = ['$state', '$rootScope', 'breadcrumbsService']
-$breadcrumbsService.$inject = ['$state', 'breadcrumbconfig']
+$breadcrumbsService.$inject = ['$state', 'breadcrumb']
+$breadcrumbDirective.$inject = ['$state', 'breadcrumbsService']
 
 # define angular module
 angular.module 'uiBreadcrumbs', ['ui.router']
-  .provider('breadcrumbconfig', $breadcrumbProvider)
+  .provider('breadcrumb', $breadcrumbProvider)
   .factory('breadcrumbsService', $breadcrumbsService)
-  .directive('uiBreadcrumb', $uiBreadcrumbDirective)
+  .directive('uiBreadcrumb', $breadcrumbDirective)
