@@ -1,53 +1,63 @@
-const config = ($stateProvider, $urlRouterProvider) => {
+const config = ($stateProvider, $urlRouterProvider, breadcrumbProvider) => {
   $urlRouterProvider.otherwise('/home');
   $urlRouterProvider.when('/', '/home');
 
-  $stateProvider
-    .state('app', {
-      abstract: true,
-      data: {
-        label: 'App',
-      },
-    })
+  breadcrumbProvider.configure({ abstract: false });
 
-    .state('app.home', {
-      url: '/home',
-      data: {
-        label: 'Home',
-      },
-      views: {
-        'content@': {
-          templateUrl: 'templates/home.html',
-        },
-      },
-    })
+  const appState = {
+    name: 'app',
+    abstract: true,
+    data: {
+      label: 'App',
+    },
+  };
 
-    .state('app.home.usage', {
-      url: '/usage',
-      data: {
-        label: 'Usage',
+  const homeState = {
+    name: 'app.home',
+    url: '/home',
+    data: {
+      label: 'Home',
+    },
+    views: {
+      'content@': {
+        templateUrl: 'templates/home.html',
       },
-      views: {
-        'content@': {
-          templateUrl: 'templates/usage.html',
-        },
-      },
-    })
+    },
+  };
 
-    .state('app.home.usage.options', {
-      url: '/options',
-      data: {
-        label: 'Options',
+  const usageState = {
+    name: 'app.home.usage',
+    url: '/usage',
+    data: {
+      label: 'Usage',
+    },
+    views: {
+      'content@': {
+        templateUrl: 'templates/usage.html',
       },
-      views: {
-        'content@': {
-          templateUrl: 'templates/options.html',
-        },
+    },
+  };
+
+  const optionsState = {
+    name: 'app.home.usage.options',
+    url: '/options',
+    data: {
+      label: 'Options',
+    },
+    views: {
+      'content@': {
+        templateUrl: 'templates/options.html',
       },
-    });
+    },
+  };
+
+  $stateProvider.state(appState);
+  $stateProvider.state(homeState);
+  $stateProvider.state(usageState);
+  $stateProvider.state(optionsState);
 };
 
-config.$inject = ['$stateProvider', '$urlRouterProvider'];
+config.$inject = ['$stateProvider', '$urlRouterProvider', 'breadcrumbProvider'];
 
 const app = angular.module('myApp', ['ui.router', 'uiBreadcrumbs']);
 app.config(config);
