@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 > **Tags**
+>
 > - Features
 > - Bug Fixes
 > - Performance Improvements
@@ -10,6 +11,42 @@ All notable changes to this project will be documented in this file.
 > - Breaking Changes
 > - Documentation
 > - Internal
+
+## v2.0.0 (2020-01-03)
+
+#### Internal
+
+- add karma-jasmine unit tests ([69b5718](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/69b5718))
+- migrate to github-actions from travis-ci ([4219f41](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/4219f41))
+- use browser-sync instead of grunt connect ([5447ff0](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/5447ff0))
+- remove grunt-eslint in favour of eslint ([f798f4f](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f798f4f))
+- cleanup build steps ([aca03be](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/aca03be))
+- update LICENSE ([f3d5256](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/f3d5256))
+- remove grunt-ng-annotate ([55d4aca](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/55d4aca))
+- remove angular-sanitize dependency ([3dc9a0b](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3dc9a0b))
+
+#### Dependency Updates
+
+- update cdn dependencies ([43a9118](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/43a9118))
+- bump devDependencies ([3dc9a0b](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/3dc9a0b))
+
+#### Breaking Changes
+
+- rename `breadcrumbconfigProvider` to `breadcrumbProvider` ([ece479c](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/ece479c))
+- use `angular.forEach` instead of `Array.forEach` for better browser compatibility ([ece479c](https://github.com/sibiraj-s/ui-router-breadcrumbs/commit/ece479c))
+
+```js
+const config = breadcrumbProvider => {
+  breadcrumbProvider.configure({
+    abstract: true
+  });
+};
+
+config.$inject = ['breadcrumbProvider'];
+app.config(config);
+```
+
+- `abstract` option in directive is no longer supported, use `breadcrumbProvider` to configure
 
 ## v1.2.4 (2018-12-29)
 
@@ -127,13 +164,13 @@ Just a Maintenance Patch
 The label is now given as
 
 ```js
-.state('app.home', {
-    url: '/home',
-    data: {
-      label: 'Home', //label to show in breadcrumbs
-    },
-    templateUrl: 'templates/home.html'
-})
+$stateProvider.state('app.home', {
+  url: '/home',
+  data: {
+    label: 'Home' //label to show in breadcrumbs
+  },
+  templateUrl: 'templates/home.html'
+});
 ```
 
 ## v1.1.3 (2017-07-07)
