@@ -19,7 +19,9 @@
     "lint": "npm run lint:coffee && npm run lint:js",
     "prepublishOnly": "node ./scripts/prepublish.js",
     "prerelease": "npm run build",
-    "release": "sh ./scripts/release.sh"
+    "release": "sh ./scripts/release.sh",
+    "test": "karma start --single-run",
+    "test:watch": "karma start"
   },
   "keywords": [
     "angular-breadcrumbs",
@@ -35,9 +37,11 @@
   "devDependencies": {
     "@uirouter/angularjs": "^1.0.24",
     "angular": "^1.7.9",
+    "angular-mocks": "^1.7.9",
     "chalk": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-angular": "^4.0.1",
     "eslint-plugin-import": "^2.19.1",
     "grunt": "^1.0.4",
     "grunt-browser-sync": "^2.2.0",
@@ -51,6 +55,9 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.1.0",
     "husky": "^3.1.0",
+    "karma": "^4.4.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^2.0.1",
     "load-grunt-tasks": "^5.1.0",
     "sass": "^1.24.0"
   }
