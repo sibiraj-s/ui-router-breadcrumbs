@@ -1,5 +1,6 @@
 extends:
   - airbnb-base
+  - pegasus
 
 plugins:
   - angular
@@ -7,9 +8,6 @@ plugins:
 rules:
   import/no-extraneous-dependencies: off
   no-console: off
-  max-len:
-    - error
-    - code: 120
 
 globals:
   angular: true
