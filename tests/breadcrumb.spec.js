@@ -1,4 +1,4 @@
-function loadAngularModule(appName, breadcrumbConfig) {
+const loadAngularModule = (appName, breadcrumbConfig) => {
   const config = ($stateProvider, breadcrumbProvider) => {
     breadcrumbProvider.configure(breadcrumbConfig);
 
@@ -46,7 +46,7 @@ function loadAngularModule(appName, breadcrumbConfig) {
   app.config(config);
 
   return app;
-}
+};
 
 describe('ui.breadcrumbs `abstract` false', () => {
   loadAngularModule('app', { abstract: false });

@@ -103,10 +103,10 @@ module.exports = (grunt) ->
           routes:
             '/dist': 'dist'
         rewriteRules: [{
-          match: '//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js',
+          match: 'https://cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.js',
           replace: '/dist/ui-router-breadcrumbs.js',
         }, {
-          match: '//cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.css',
+          match: 'https://cdn.jsdelivr.net/npm/ui-router-breadcrumbs@latest/ui-router-breadcrumbs.min.css',
           replace: '/dist/ui-router-breadcrumbs.css'
         }]
 
