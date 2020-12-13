@@ -35,6 +35,8 @@
     "angular": ">=1.6.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@uirouter/angularjs": "^1.0.28",
     "angular": "^1.8.2",
     "angular-mocks": "^1.8.2",
