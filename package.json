@@ -17,9 +17,6 @@
     "lint:coffee": "grunt coffeelintr",
     "lint:js": "eslint . --ignore-path .gitignore",
     "lint": "npm run lint:coffee && npm run lint:js",
-    "prepublishOnly": "node ./scripts/prepublish.js",
-    "prerelease": "npm run build",
-    "release": "sh ./scripts/release.sh",
     "test": "karma start --single-run",
     "test:watch": "karma start"
   },
