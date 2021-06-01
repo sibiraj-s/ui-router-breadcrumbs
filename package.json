@@ -9,7 +9,7 @@
   "bugs": "https://github.com/sibiraj-s/ui-router-breadcrumbs/issues",
   "homepage": "https://github.com/sibiraj-s/ui-router-breadcrumbs#readme",
   "engines": {
-    "node": ">=10"
+    "node": ">=16"
   },
   "scripts": {
     "serve": "grunt serve",
